@@ -164,6 +164,7 @@ let skuArr = ref([])
 // 数据总数
 let total = ref(0)
 let getSkuListData = async (pager = 1) => {
+  console.log('第一次运行page:', pager)
   pageNo.value = pager
   let result = await reqSkuList(pageNo.value, pageSize.value)
   console.log('我是result', result)
